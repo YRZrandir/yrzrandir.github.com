@@ -1244,7 +1244,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff2d;
+  background: #f7817f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1494,7 +1494,7 @@ pre .javascript .function {
   }
 }
 .with-love {
-  color: #808080;
+  color: #909090;
   display: inline-block;
   margin: 0 5px;
 }
@@ -2442,7 +2442,6 @@ ul.breadcrumb li + li:last-child {
   box-sizing: border-box;
   color: #555;
   width: 240px;
-  opacity: 0;
 }
 .sidebar-inner.affix {
   position: fixed;
