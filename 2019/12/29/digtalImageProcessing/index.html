@@ -50,29 +50,44 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YRZrandirBlog">
-<meta property="og:url" content="https://yrzrandir.github.io/index.html">
+  <meta name="description" content="灰度变换与空间滤波灰度值变换与空间滤波1. 基础图像的空间域处理可用下式表示$$g(x,y) = T[f(x,y)]$$其中，f(x,y)是输入图像，g(x,y)是输出图像，T是在点(x,y)的邻域上定义的关于 f 的一种算子。 邻域和在邻域上预定义的操作称为空间滤波器（或空间掩模，核，模板，窗口）。 最小邻域的大小为1 * 1。此时 g 仅取决于点(x,y)处的 f 值。这种情况的处理称为点处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="digitalImageProcessing">
+<meta property="og:url" content="https://yrzrandir.github.io/2019/12/29/digtalImageProcessing/index.html">
 <meta property="og:site_name" content="YRZrandirBlog">
+<meta property="og:description" content="灰度变换与空间滤波灰度值变换与空间滤波1. 基础图像的空间域处理可用下式表示$$g(x,y) = T[f(x,y)]$$其中，f(x,y)是输入图像，g(x,y)是输出图像，T是在点(x,y)的邻域上定义的关于 f 的一种算子。 邻域和在邻域上预定义的操作称为空间滤波器（或空间掩模，核，模板，窗口）。 最小邻域的大小为1 * 1。此时 g 仅取决于点(x,y)处的 f 值。这种情况的处理称为点处理">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//1.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//2.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//3.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//4.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//6.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//5.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//7.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//8.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//9.png">
+<meta property="og:image" content="https://yrzrandir.github.io/.io//10.png">
+<meta property="og:updated_time" content="2019-12-31T11:31:02.402Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YRZrandirBlog">
+<meta name="twitter:title" content="digitalImageProcessing">
+<meta name="twitter:description" content="灰度变换与空间滤波灰度值变换与空间滤波1. 基础图像的空间域处理可用下式表示$$g(x,y) = T[f(x,y)]$$其中，f(x,y)是输入图像，g(x,y)是输出图像，T是在点(x,y)的邻域上定义的关于 f 的一种算子。 邻域和在邻域上预定义的操作称为空间滤波器（或空间掩模，核，模板，窗口）。 最小邻域的大小为1 * 1。此时 g 仅取决于点(x,y)处的 f 值。这种情况的处理称为点处理">
+<meta name="twitter:image" content="https://yrzrandir.github.io/.io//1.png">
 
-<link rel="canonical" href="https://yrzrandir.github.io/">
+<link rel="canonical" href="https://yrzrandir.github.io/2019/12/29/digtalImageProcessing/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>YRZrandirBlog</title>
+  <title>digitalImageProcessing | YRZrandirBlog</title>
   
 
 
@@ -170,10 +185,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://yrzrandir.github.io/2019/12/29/digtalImageProcessing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -187,8 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/29/digtalImageProcessing/" class="post-title-link" itemprop="url">digitalImageProcessing</a>
+          digitalImageProcessing
         </h1>
 
         <div class="post-meta">
@@ -230,7 +244,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="灰度变换与空间滤波"><a href="#灰度变换与空间滤波" class="headerlink" title="灰度变换与空间滤波"></a>灰度变换与空间滤波</h2><h2 id="灰度值变换与空间滤波"><a href="#灰度值变换与空间滤波" class="headerlink" title="灰度值变换与空间滤波"></a>灰度值变换与空间滤波</h2><h3 id="1-基础"><a href="#1-基础" class="headerlink" title="1. 基础"></a>1. 基础</h3><p>图像的空间域处理可用下式表示<br>$$<br>g(x,y) = T[f(x,y)]<br>$$<br>其中，f(x,y)是输入图像，g(x,y)是输出图像，T是在点(x,y)的邻域上定义的关于 f 的一种算子。</p>
+        <h2 id="灰度变换与空间滤波"><a href="#灰度变换与空间滤波" class="headerlink" title="灰度变换与空间滤波"></a>灰度变换与空间滤波</h2><h2 id="灰度值变换与空间滤波"><a href="#灰度值变换与空间滤波" class="headerlink" title="灰度值变换与空间滤波"></a>灰度值变换与空间滤波</h2><h3 id="1-基础"><a href="#1-基础" class="headerlink" title="1. 基础"></a>1. 基础</h3><p>图像的空间域处理可用下式表示<br>$$<br>g(x,y) = T[f(x,y)]<br>$$<br>其中，f(x,y)是输入图像，g(x,y)是输出图像，T是在点(x,y)的邻域上定义的关于 f 的一种算子。</p>
 <p>邻域和在邻域上预定义的操作称为<strong>空间滤波器（或空间掩模，核，模板，窗口）</strong>。</p>
 <p>最小邻域的大小为1 * 1。此时 g 仅取决于点(x,y)处的 f 值。这种情况的处理称为<strong>点处理技术</strong>，可以表示为<br>$$<br>s = T(r)<br>$$<br>其他更普遍的情况称为<strong>邻域处理技术</strong>。</p>
 <h3 id="2-基本灰度变换函数"><a href="#2-基本灰度变换函数" class="headerlink" title="2.基本灰度变换函数"></a>2.基本灰度变换函数</h3><h4 id="图像反转"><a href="#图像反转" class="headerlink" title="图像反转"></a>图像反转</h4><p>$$<br>s = L - 1 - r<br>$$</p>
@@ -278,24 +292,24 @@
 <p><img src="/.io//9.png" alt></p>
 <p><img src="/.io//10.png" alt></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
       </footer>
+    
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -324,6 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#灰度变换与空间滤波"><span class="nav-number">1.</span> <span class="nav-text">灰度变换与空间滤波</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#灰度值变换与空间滤波"><span class="nav-number">2.</span> <span class="nav-text">灰度值变换与空间滤波</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基础"><span class="nav-number">2.1.</span> <span class="nav-text">1. 基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基本灰度变换函数"><span class="nav-number">2.2.</span> <span class="nav-text">2.基本灰度变换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图像反转"><span class="nav-number">2.2.1.</span> <span class="nav-text">图像反转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对数变换"><span class="nav-number">2.2.2.</span> <span class="nav-text">对数变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#幂律（gamma）变换"><span class="nav-number">2.2.3.</span> <span class="nav-text">幂律（gamma）变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分段线性变换函数"><span class="nav-number">2.2.4.</span> <span class="nav-text">分段线性变换函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-直方图处理"><span class="nav-number">2.3.</span> <span class="nav-text">3.直方图处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直方图均衡"><span class="nav-number">2.3.1.</span> <span class="nav-text">直方图均衡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直方图匹配（规定化）"><span class="nav-number">2.3.2.</span> <span class="nav-text">直方图匹配（规定化）</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
